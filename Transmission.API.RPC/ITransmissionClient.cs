@@ -122,9 +122,9 @@ namespace Transmission.API.RPC
         /// <summary>
         /// Remove torrents (API: torrent-remove)
         /// </summary>
-        /// <param name="ids">Torrents id</param>
+        /// <param name="ids">A list of torrent id numbers, sha1 hash strings, or both</param>
         /// <param name="deleteData">Remove local data</param>
-        void TorrentRemove(long[] ids, bool deleteData = false);
+        void TorrentRemove(object[] ids, bool deleteData = false);
 
         /// <summary>
         /// Rename a file or directory in a torrent (API: torrent-rename-path)

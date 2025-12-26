@@ -178,9 +178,9 @@ namespace Transmission.API.RPC
         /// <summary>
         /// Remove torrents (API: torrent-remove)
         /// </summary>
-        /// <param name="ids">Torrents id</param>
+        /// <param name="ids">A list of torrent id numbers, sha1 hash strings, or both</param>
         /// <param name="deleteData">Remove data</param>
-        public void TorrentRemove(long[] ids, bool deleteData = false)
+        public void TorrentRemove(object[] ids, bool deleteData = false)
         {
             TorrentRemoveAsync(ids, deleteData).WaitAndUnwrapException();
         }

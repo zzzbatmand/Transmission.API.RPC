@@ -173,9 +173,9 @@ namespace Transmission.API.RPC
         /// <summary>
         /// Remove torrents
         /// </summary>
-        /// <param name="ids">Torrents id</param>
+        /// <param name="ids">A list of torrent id numbers, sha1 hash strings, or both</param>
         /// <param name="deleteData">Remove data</param>
-        public async Task TorrentRemoveAsync(long[] ids, bool deleteData = false)
+        public async Task TorrentRemoveAsync(object[] ids, bool deleteData = false)
         {
             var arguments = new Dictionary<string, object>();
 

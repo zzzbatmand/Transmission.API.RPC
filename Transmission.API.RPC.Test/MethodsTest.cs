@@ -117,7 +117,7 @@ namespace Transmission.API.RPC.Test
 			var torrentInfo = torrentsInfo.Torrents.FirstOrDefault();
 			Assert.IsNotNull(torrentInfo, "Torrent not found");
 
-			client.TorrentRemove(new long[] { torrentInfo.Id });
+			client.TorrentRemove(new object[] { torrentInfo.Id });
 
 			torrentsInfo = client.TorrentGet(TorrentFields.ALL_FIELDS);
 
